@@ -4,4 +4,5 @@ from wtforms import TextField, TextAreaField, SubmitField
 
 class PrereqForm(Form):
   prereq = TextField("Prerequisite")
+  
   submit = SubmitField("Send")

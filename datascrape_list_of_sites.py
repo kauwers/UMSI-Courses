@@ -13,13 +13,9 @@ def check_for_prereq(web_address):
     data = requests.get(web_address, headers=headers)
     soup = BeautifulSoup(data.text, "lxml")
     prereq_present = 0
-
     prereq_search = soup(string="SI 500")
-
     for i in prereq_search:
         prereq_present = prereq_present +1
-        print prereq_present
-
     if prereq_present > 0:
         courses_found = get_course_name("https://www.si.umich.edu/programs/courses/620")
         print(courses_found)
